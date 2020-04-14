@@ -1,0 +1,40 @@
+{
+  "name": "POC_express_mocha_chai",
+  "version": "1.0.0",
+  "description": "Prova de conceito em Node com express e testes com mocha&amp;chai",
+  "main": "./src/server.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "dev": "nodemon server.js",
+    "migrations_up": "knex migrate:latest",
+    "migrations_down": "knex migrate:rollback",
+    "migrations_status": "knex migrate:status",
+    "test": "cross-env NODE_ENV=test mocha --recursive",
+    "tdd": "cross-env NODE_ENV=test mocha --watch --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuilhermeSantanaAndrade/POC_express_mocha_chai.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GuilhermeSantanaAndrade/POC_express_mocha_chai/issues"
+  },
+  "homepage": "https://github.com/GuilhermeSantanaAndrade/POC_express_mocha_chai#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.20.13",
+    "mocha": "^7.1.1",
+    "moment": "^2.24.0",
+    "sqlite3": "^4.1.1",
+    "uuid": "^7.0.3"
+  }
+}
