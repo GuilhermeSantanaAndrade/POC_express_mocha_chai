@@ -9,6 +9,9 @@ chai.use(chaiHttp);
 
 describe("Customers", () => {
   before(async () => {
+    await connection.migrate.rollback();
+    await connection.migrate.latest();
+
     // GET ACCESS-TOKEN FOR ALL TESTs
     const password = "ROOT";
     const encripted_password = await authService.encodeToBase64(password);
@@ -26,10 +29,6 @@ describe("Customers", () => {
     //const _token = JSON.parse(response.text).data.token;
     const _token = "SAEHDSKJAHDEJKSAHDJKHAJKSDA";
     global.AUTOTEST_ACCESS_TOKEN = _token;
-  });
-
-  beforeEach(async () => {
-    await connection.migrate.latest();
   });
 
   after(async () => {
