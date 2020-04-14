@@ -1,5 +1,3 @@
-global.AUTO_TEST = true;
-
 const chai = require("chai");
 const chaiHttp = require("chai-http");
 const functions = require("../../src/helpers/functions.js");
